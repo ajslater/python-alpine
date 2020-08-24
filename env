@@ -1,4 +1,4 @@
-REPO=ajslater/alpine-base
-IMAGE=ajslater/alpine-base
-ALPINE_VERSION=3.12.0
-PKG_VERSION=0.1.1
+REPO=ajslater/python-alpine
+IMAGE=ajslater/python-alpine
+BASE_VERSION=3.8.5-alpine3.12
+PKG_VERSION=0.2.0

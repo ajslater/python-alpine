@@ -1,7 +1,8 @@
-ARG ALPINE_VERSION
-FROM alpine:$ALPINE_VERSION
+ARG BASE_VERSION
+FROM python:$BASE_VERSION
 LABEL maintainer="AJ Slater <aj@slater.net>"
-LABEL version=${ALPINE_VERSION}
+ARG PKG_VERSION
+LABEL version=${BASE_VERSION}_${PKG_VERSION}
 
 RUN echo "*** UID/GID Init ***"
 RUN apk add --no-cache shadow=4.8.1-r0

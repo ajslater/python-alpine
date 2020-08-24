@@ -1,4 +1,3 @@
-version: 2.1
 executors:
     docker-publisher:
         machine: true
@@ -34,14 +33,21 @@ parameters:
     image_archive:
         default: image.tar
         type: string
+version: 2.1
 workflows:
-    version: 2.1
     build-deploy:
         jobs:
-            - build
+            - build:
+                filters:
+                    branches:
+                        only:
+                            - develop
+                            - master
             - deploy:
                 filters:
                     branches:
                         only: master
                 requires:
                     - build
+    version: 2.1
+
