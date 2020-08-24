@@ -11,5 +11,3 @@ User uid:    $(id -u abc)
 User gid:    $(id -g abc)
 -------------------------------------
 "
-chown abc:abc /config
-chown abc:abc /comics
