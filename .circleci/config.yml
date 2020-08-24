@@ -28,7 +28,7 @@ jobs:
                 command: docker load -i "./<< pipeline.parameters.image_archive >>"
                 name: Load archive Docker image
             - run:
-                command: ./tag-and-push.sh
+                command: ./ci/tag-and-push.sh
                 name: Publish Docker Image to Docker Hub
 parameters:
     image_archive:
