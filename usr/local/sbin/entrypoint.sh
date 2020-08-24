@@ -6,7 +6,7 @@ if [ -n "${PUID:-}${PGID:-}"  ]; then
     if [ -f "$LOCAL_USER_SCRIPT" ]; then
         $LOCAL_USER_SCRIPT
     fi
-    su abc --shell /bin/sh --command "$*"
+    su abc --command "$@"
 else
-    exec "$*"
+    exec "$@"
 fi
