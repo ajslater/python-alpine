@@ -1,0 +1,5 @@
+version: "3"
+services:
+    alpine-base:
+        image: ajslater/alpine-base
+        build: .
