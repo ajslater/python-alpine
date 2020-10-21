@@ -1,5 +1,5 @@
 version: "3"
 services:
-    python-alpine:
-        image: ajslater/python-alpine
-        build: .
+  python-alpine:
+    image: ajslater/python-alpine
+    build: .
