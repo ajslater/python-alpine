@@ -1,8 +1,7 @@
 ARG BASE_VERSION
 FROM python:$BASE_VERSION
 LABEL maintainer="AJ Slater <aj@slater.net>"
-ARG PKG_VERSION
-LABEL version=python${BASE_VERSION}_${PKG_VERSION}
+LABEL version=python${VERSION}
 
 RUN echo "*** UID/GID Init ***"
 RUN apk add --no-cache shadow=4.8.1-r0
