@@ -18,8 +18,6 @@ jobs:
           name: Build
   deploy:
     executor: latest-machine
-    environment:
-      PUSH: "--push"
     steps:
       - checkout
       - run:
@@ -29,7 +27,7 @@ jobs:
           command: ./install-binfmt-platforms.sh
           name: Install binfmt Platforms
       - run:
-          command: ./build-multiarch.sh
+          command: ./build-multiarch.sh push
           name: Build & Push
 version: 2.1
 workflows:
