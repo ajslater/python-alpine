@@ -17,7 +17,4 @@ if [ "${1-}" == 'push' ]; then
     BUILD_ARGS+=(--push)
 fi
 
-# shellcheck disable=SC2086
-docker buildx build \
-    "${BUILD_ARGS[@]-}"
-.
+docker buildx build "${BUILD_ARGS[@]-}" .
