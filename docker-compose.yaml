@@ -3,3 +3,4 @@ services:
   python-alpine:
     image: ajslater/python-alpine
     build: .
+    env_file: .env
