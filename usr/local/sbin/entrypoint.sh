@@ -1,4 +1,5 @@
 #!/bin/sh
+# If UID & GID specified, setup abc user and run as abc.
 set -eu
 
 if [ "${PUID:-}${PGID:-}" != ""  ]; then

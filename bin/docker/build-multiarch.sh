@@ -1,10 +1,11 @@
 #!/bin/bash
+# Build multi-arch docker image for all platforms
+# Optionally push
 set -xeuo pipefail
 source .env
 
 export DOCKER_CLI_EXPERIMENTAL=enabled
 export DOCKER_BUILDKIT=1
-docker buildx create --use
 
 BUILD_ARGS=(
     --platform "$PLATFORMS"
