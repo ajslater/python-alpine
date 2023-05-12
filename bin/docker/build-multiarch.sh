@@ -1,4 +1,6 @@
 #!/bin/bash
+# Build multi-arch docker image for all platforms
+# Optionally push
 set -xeuo pipefail
 source .env
 

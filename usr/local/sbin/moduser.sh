@@ -1,4 +1,5 @@
 #!/bin/sh
+# Set correct uid & gid for abc user
 set -eu
 PUID=${PUID:-911}
 PGID=${PGID:-911}
