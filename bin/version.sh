@@ -3,8 +3,8 @@
 set -euo pipefail
 VERSION="${1:-}"
 if [ "$VERSION" = "" ]; then
-    source .env
-    echo "$VERSION"
+  source .env
+  echo "$VERSION"
 else
-    echo Edit .env by hand.
+  echo Edit .env by hand.
 fi

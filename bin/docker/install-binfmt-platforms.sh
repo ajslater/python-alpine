@@ -10,10 +10,10 @@ echo "$DOCKER_PASS" | docker login --username="$DOCKER_USER" --password-stdin
 # install emulator binaries if i need to
 EMULATORS=
 if [[ ${PLATFORMS-} == "linux/armhf" ]]; then
-    # this is the only arch i need to cross compile on circleci
-    EMULATORS=arm
+  # this is the only arch i need to cross compile on circleci
+  EMULATORS=arm
 elif [[ "$(uname -m)" == "aarch64" ]]; then
-    EMULATORS=aarch64
+  EMULATORS=aarch64
 fi
 
 if [[ -n ${EMULATORS-} ]]; then
